@@ -32,7 +32,6 @@ export default class Themes extends Component {
     }
 
     renderThemes(data) {
-        console.log(data);
         return (
             <div key={data}>
                 <div className="product-container">
@@ -44,7 +43,7 @@ export default class Themes extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container body-container">
                 <div className="row">
                     <div className="col s12 m3 l3">
                         <div>

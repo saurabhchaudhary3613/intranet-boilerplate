@@ -30,10 +30,9 @@ export default class Products extends Component {
     }
 
     renderProducts(data) {
-        console.log(data);
         return (
             <div key={data}>
-                <div className="product-container">
+                <div className="product-container body-container">
                     <div className="product-name">{data}</div>
                 </div>
             </div>
@@ -43,7 +42,7 @@ export default class Products extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                <div className="container body-container">
                     <div className="row">
                         <div className="col s12 m4 l4">
                             <div>

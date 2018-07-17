@@ -23,7 +23,7 @@ h1 {
 }
 .container {
 	box-sizing: border-box;
-	border: 1px solid black;
+	border: 1px solid grey;
 	padding: 20px;
 }
 
@@ -32,6 +32,8 @@ h1 {
 }
 .body-container {
 	background: #f7fafb;
+	border-bottom: none;
+    border-right: none;
 }
 // header {
 // 	height: 50px;
@@ -39,7 +41,11 @@ h1 {
 nav {
 	height: 40px;
 }
-footer {
-	height: 40px;
+// footer {
+// 	height: 40px;
+// }
+.nav-btn {
+	margin-right: 5px;
+    padding: 0px 42px;
 }
 
