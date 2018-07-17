@@ -57,18 +57,20 @@ export default class Products extends Component {
                                     Other Investment Options
                                 </h5>
                             </div>
-                            {this.otherInvestmentOptions.map(this.renderProducts)}
+                            {this.otherInvestmentOptions.map(
+                                this.renderProducts
+                            )}
                         </div>
                         <div className="col s12 m4 l4">
                             <div>
-                                <h5 className="product-title">Product Resources</h5>
+                                <h5 className="product-title">
+                                    Product Resources
+                                </h5>
                             </div>
                             {this.productResources.map(this.renderProducts)}
                         </div>
                     </div>
-                    
                 </div>
-                
             </div>
         );
     }

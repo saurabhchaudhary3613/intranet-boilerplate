@@ -5,7 +5,6 @@ const Header = () => (
         <div className="header-text">
             <span>MFS</span>|<span>Global Distribution</span>
         </div>
-        
     </header>
 );
 
