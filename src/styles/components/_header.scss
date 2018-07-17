@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+.header-container {
+    padding: 0px;
+    border:none;
+}
+.header-text {
+    padding: 17px 0 15px 10px;
+    background: $header-background;
+}
