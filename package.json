@@ -53,7 +53,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot prettier",
-    "build": "webpack --mode prettier production",
+    "build": "webpack --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js",
