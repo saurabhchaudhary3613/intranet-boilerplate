@@ -1,16 +1,13 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-
   entry: {
-    app: './src/index.js',
-    settings: './src/settings.js',
+    index: './src/index.js',
     products: './src/products.js',
     themes: './src/themes.js',
     teams: './src/teams.js'
-
   },
   output: {
     path: path.join(__dirname, '/dist'),
@@ -27,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       // {
       //     test: /\.scss$/,
@@ -50,13 +47,8 @@ module.exports = {
     // }),
     new HtmlWebpackPlugin({
       template: './src/views/index.html',
-      chunks: ['app'],
+      chunks: ['index'],
       filename: './index.html' //relative to root of the application
-    }),
-    new HtmlWebpackPlugin({
-        template: './src/views/settings.html',
-        chunks: ['settings'],
-        filename: './settings.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/views/products.html',
@@ -76,7 +68,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css',
     })
-    
   ]
 
 };

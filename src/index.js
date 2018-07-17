@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Home from './scripts/Home';
+import Home from './scripts/components/Home';
 
 import './styles/style.scss';
 

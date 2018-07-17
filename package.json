@@ -52,8 +52,8 @@
     "collectCoverage": true
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open --hot prettier",
+    "build": "webpack --mode prettier production",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js",

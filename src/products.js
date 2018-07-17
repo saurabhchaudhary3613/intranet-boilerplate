@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Products from './scripts/Products';
+import Products from './scripts/components/Products';
 import Header from './scripts/components/Header';
 import Footer from './scripts/components/Footer';
 

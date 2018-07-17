@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Header from './scripts/components/Header';
-import Teams from './scripts/Teams';
+import Teams from './scripts/components/Teams';
 import Footer from './scripts/components/Footer';
 
 import './styles/style.scss';
