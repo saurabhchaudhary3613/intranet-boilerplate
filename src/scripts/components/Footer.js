@@ -8,13 +8,13 @@ export default class Footer extends Component {
                 <a className="btn nav-btn" href="/">
                     HOME
                 </a>
-                <a className="btn nav-btn" href="/products.html">
+                <a className="btn nav-btn" href="/products">
                     PRODUCTS
                 </a>
-                <a className="btn nav-btn" href="/themes.html">
+                <a className="btn nav-btn" href="/themes">
                     THEMES
                 </a>
-                <a className="btn nav-btn" href="/teams.html">
+                <a className="btn nav-btn" href="/teams">
                     TEAMS
                 </a>
                 <a className="btn nav-btn">QUICK LINKS</a>

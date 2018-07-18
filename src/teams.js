@@ -4,7 +4,7 @@ import Header from './scripts/components/Header';
 import Teams from './scripts/components/Teams';
 import Footer from './scripts/components/Footer';
 
-import './styles/style.scss';
+//import './styles/style.scss';
 
 const headerId = document.getElementById('header');
 const elementId = document.getElementById('teams');
