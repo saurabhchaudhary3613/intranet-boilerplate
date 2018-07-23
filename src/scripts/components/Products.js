@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 export default class Products extends Component {
-    
     renderProducts(data) {
         return (
             <div key={data}>
                 <div className="product-container body-container">
-                    <div data-testid="productName" className="product-name">{data}</div>
+                    <div data-testid="productName" className="product-name">
+                        {data}
+                    </div>
                 </div>
             </div>
         );
     }
 
     render() {
-
         const mutualFunds = [
             'US Equity',
             'Global / International Equity',

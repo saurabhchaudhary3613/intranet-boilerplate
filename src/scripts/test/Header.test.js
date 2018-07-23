@@ -8,6 +8,5 @@ test('Header renders specified title', () => {
             <Header />
         </div>
     );
-    //console.log(wrapper.text());
     expect(wrapper.text()).toEqual('MFS|Global Distribution');
 });
