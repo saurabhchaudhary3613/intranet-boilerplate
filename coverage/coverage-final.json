@@ -1,1 +1,2 @@
-{}
+{"C:\\POC\\intranet-boilerplate\\src\\scripts\\components\\header.js": {"path":"C:\\POC\\intranet-boilerplate\\src\\scripts\\components\\header.js","statementMap":{"0":{"start":{"line":3,"column":15},"end":{"line":9,"column":1}},"1":{"start":{"line":4,"column":4},"end":{"line":8,"column":13}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":3,"column":15},"end":{"line":3,"column":16}},"loc":{"start":{"line":4,"column":4},"end":{"line":8,"column":13}},"line":4}},"branchMap":{},"s":{"0":1,"1":1},"f":{"0":1},"b":{},"_coverageSchema":"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c","hash":"b60b636f0f3987ddb2aa714ba2d99f2c548b1007"}
+}

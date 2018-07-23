@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//const SassLintPlugin = require('sass-lint-webpack')
 
 module.exports = {
   entry: {
@@ -68,6 +69,18 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css',
     })
+    // ,
+    // new SassLintPlugin({
+    //   configFile: '.sass-lint.yml',
+    //   context: ['inherits from webpack'],
+    //   ignoreFiles: [],
+    //   ignorePlugins: [],
+    //   glob: '**/*.s?(a|c)ss',
+    //   quiet: false,
+    //   failOnWarning: false,
+    //   failOnError: false,
+    //   testing: false
+    // })
   ]
 
 };
