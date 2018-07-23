@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 
 export default class Products extends Component {
-    constructor() {
-        super();
-        this.mutualFunds = [
+    
+    renderProducts(data) {
+        return (
+            <div key={data}>
+                <div className="product-container body-container">
+                    <div data-testid="productName" className="product-name">{data}</div>
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+
+        const mutualFunds = [
             'US Equity',
             'Global / International Equity',
             'Fixed Income',
@@ -13,33 +24,20 @@ export default class Products extends Component {
             'Specialty / Alternative',
             'Money Market'
         ];
-        this.otherInvestmentOptions = [
+        const otherInvestmentOptions = [
             'Separately Managed Accounts',
             'Variable Insurance Portfolios',
             'Closed End Funds',
             'Institutional Trust',
             '529 College Planning'
         ];
-        this.productResources = [
+        const productResources = [
             'Factsheets',
             'Lipper & Morningstar Ratings',
             'Competitor Profiles',
             'Coverage Maps',
             'Global Product Blog'
         ];
-    }
-
-    renderProducts(data) {
-        return (
-            <div key={data}>
-                <div className="product-container body-container">
-                    <div className="product-name">{data}</div>
-                </div>
-            </div>
-        );
-    }
-
-    render() {
         return (
             <div>
                 <div className="container body-container">
