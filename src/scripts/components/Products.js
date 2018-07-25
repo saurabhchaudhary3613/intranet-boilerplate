@@ -1,6 +1,33 @@
 import React, { Component } from 'react';
 
 export default class Products extends Component {
+    constructor() {
+        super();
+        this.mutualFunds = [
+            'US Equity',
+            'Global / International Equity',
+            'Fixed Income',
+            'Tax Advantaged Fixed Income',
+            'Equity Sector',
+            'Multi Asset',
+            'Specialty / Alternative',
+            'Money Market'
+        ];
+        this.otherInvestmentOptions = [
+            'Separately Managed Accounts',
+            'Variable Insurance Portfolios',
+            'Closed End Funds',
+            'Institutional Trust',
+            '529 College Planning'
+        ];
+        this.productResources = [
+            'Factsheets',
+            'Lipper & Morningstar Ratings',
+            'Competitor Profiles',
+            'Coverage Maps',
+            'Global Product Blog'
+        ];
+    }
     renderProducts(data) {
         return (
             <div key={data}>
@@ -14,30 +41,7 @@ export default class Products extends Component {
     }
 
     render() {
-        const mutualFunds = [
-            'US Equity',
-            'Global / International Equity',
-            'Fixed Income',
-            'Tax Advantaged Fixed Income',
-            'Equity Sector',
-            'Multi Asset',
-            'Specialty / Alternative',
-            'Money Market'
-        ];
-        const otherInvestmentOptions = [
-            'Separately Managed Accounts',
-            'Variable Insurance Portfolios',
-            'Closed End Funds',
-            'Institutional Trust',
-            '529 College Planning'
-        ];
-        const productResources = [
-            'Factsheets',
-            'Lipper & Morningstar Ratings',
-            'Competitor Profiles',
-            'Coverage Maps',
-            'Global Product Blog'
-        ];
+       
         return (
             <div>
                 <div className="container body-container">
