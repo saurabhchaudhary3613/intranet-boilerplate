@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
+import API from './api';
+//import { fetchProducts } from '../actions/action';
 
 export default class Products extends Component {
     constructor() {
         super();
-        this.mutualFunds = [
-            'US Equity',
-            'Global / International Equity',
-            'Fixed Income',
-            'Tax Advantaged Fixed Income',
-            'Equity Sector',
-            'Multi Asset',
-            'Specialty / Alternative',
-            'Money Market'
-        ];
-        this.otherInvestmentOptions = [
-            'Separately Managed Accounts',
-            'Variable Insurance Portfolios',
-            'Closed End Funds',
-            'Institutional Trust',
-            '529 College Planning'
-        ];
-        this.productResources = [
-            'Factsheets',
-            'Lipper & Morningstar Ratings',
-            'Competitor Profiles',
-            'Coverage Maps',
-            'Global Product Blog'
-        ];
+        this.state = {
+            mutualFunds: [],
+            otherInvestmentOptions: [],
+            productResources: []
+        };
     }
+
+    componentDidMount() {
+        API.get()
+            .then(res => {
+                const { products } = res.data;
+                this.setState({
+                    mutualFunds: products.mutualFunds,
+                    otherInvestmentOptions: products.otherInvestmentOptions,
+                    productResources: products.productResources
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     renderProducts(data) {
         return (
             <div key={data}>
@@ -41,7 +40,6 @@ export default class Products extends Component {
     }
 
     render() {
-       
         return (
             <div>
                 <div className="container body-container">
@@ -50,7 +48,7 @@ export default class Products extends Component {
                             <div>
                                 <h5 className="product-title">Mutual Funds</h5>
                             </div>
-                            {this.mutualFunds.map(this.renderProducts)}
+                            {this.state.mutualFunds.map(this.renderProducts)}
                         </div>
                         <div className="col s12 m4 l4">
                             <div>
@@ -58,7 +56,7 @@ export default class Products extends Component {
                                     Other Investment Options
                                 </h5>
                             </div>
-                            {this.otherInvestmentOptions.map(
+                            {this.state.otherInvestmentOptions.map(
                                 this.renderProducts
                             )}
                         </div>
@@ -68,7 +66,9 @@ export default class Products extends Component {
                                     Product Resources
                                 </h5>
                             </div>
-                            {this.productResources.map(this.renderProducts)}
+                            {this.state.productResources.map(
+                                this.renderProducts
+                            )}
                         </div>
                     </div>
                 </div>

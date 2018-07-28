@@ -1,30 +1,25 @@
 import React, { Component } from 'react';
+import API from './api';
 
 export default class Teams extends Component {
     constructor() {
         super();
-        this.sales = [
-            'Wholesaler Coverage',
-            'Harte Hanks',
-            'Pricing Request Form'
-        ];
-        this.keyAccountAndFirm = [
-            'Platform Info',
-            'Field Info',
-            'Policies & Procedures',
-            'Marketing Resources',
-            'Institutional Services'
-        ];
-        this.isg = [
-            'Investment Solutions Overview',
-            'Overview Brochure',
-            'Team Organization',
-            'Client & Industry Research',
-            'Capital Markets & Macro',
-            'Retail Client Projects',
-            'Slide Library',
-            'LTCME'
-        ];
+        this.state = {
+            sales: [],
+            keyAccountAndFirm: [],
+            igs: []
+        };
+    }
+
+    componentDidMount() {
+        API.get().then(res => {
+            const { teams } = res.data;
+            this.setState({
+                sales: teams.sales,
+                keyAccountAndFirm: teams.keyAccountAndFirm,
+                igs: teams.igs
+            });
+        });
     }
 
     renderTeams(data) {
@@ -45,7 +40,7 @@ export default class Teams extends Component {
                         <div>
                             <h5 className="product-title">Sales</h5>
                         </div>
-                        {this.sales.map(this.renderTeams)}
+                        {this.state.sales.map(this.renderTeams)}
                     </div>
                     <div className="col s12 m4 l4">
                         <div>
@@ -53,13 +48,13 @@ export default class Teams extends Component {
                                 Key Accounts & Firms
                             </h5>
                         </div>
-                        {this.keyAccountAndFirm.map(this.renderTeams)}
+                        {this.state.keyAccountAndFirm.map(this.renderTeams)}
                     </div>
                     <div className="col s12 m4 l4">
                         <div>
                             <h5 className="product-title">ISG</h5>
                         </div>
-                        {this.isg.map(this.renderTeams)}
+                        {this.state.igs.map(this.renderTeams)}
                     </div>
                 </div>
             </div>

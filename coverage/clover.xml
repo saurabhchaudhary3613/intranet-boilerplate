@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1532345092990" clover="3.2.0">
-  <project timestamp="1532345092990" name="All files">
-    <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="10" coveredelements="3" complexity="0" loc="7" ncloc="7" packages="1" files="2" classes="2">
-      <file name="Header.js" path="C:\POC\intranet-boilerplate\src\scripts\components\Header.js">
+<coverage generated="1532798201187" clover="3.2.0">
+  <project timestamp="1532798201187" name="All files">
+    <metrics statements="10" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1" elements="17" coveredelements="3" complexity="0" loc="10" ncloc="10" packages="1" files="3" classes="3">
+      <file name="Header.js" path="I:\intranet\intranet-boilerplate\src\scripts\components\Header.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
       </file>
-      <file name="Products.js" path="C:\POC\intranet-boilerplate\src\scripts\components\Products.js">
-        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+      <file name="Products.js" path="I:\intranet\intranet-boilerplate\src\scripts\components\Products.js">
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+      </file>
+      <file name="api.js" path="I:\intranet\intranet-boilerplate\src\scripts\components\api.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </metrics>
   </project>

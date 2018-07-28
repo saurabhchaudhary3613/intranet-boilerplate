@@ -3,7 +3,8 @@ module.exports = {
         browser: true,
         es6: true,
         node: true,
-        mocha: true
+        mocha: true,
+        jest: true
     },
     globals: {
         expect: true

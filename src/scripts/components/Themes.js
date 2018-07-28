@@ -1,34 +1,27 @@
 import React, { Component } from 'react';
+import API from './api';
 
 export default class Themes extends Component {
     constructor() {
         super();
-        this.enterpriseThemes = [
-            'Active Management',
-            'Client Alignment',
-            'Retirement',
-            'Sustainable Investing',
-            'Fixed Income'
-        ];
-        this.clientThemes = [
-            'Capital Markets',
-            'Client Insights',
-            'Quant/Multi-Asset',
-            'Fundamental Equity'
-        ];
-        this.thoughtLeadership = [
-            'White Papers',
-            'Investment Insights',
-            'Market Commentaries',
-            'Investment Solutions',
-            'Video Library',
-            'Learning Center'
-        ];
-        this.Campaigns = [
-            'Prepare for the Bear',
-            "Barron's Recognition",
-            'CRM Pilot'
-        ];
+        this.state = {
+            enterpriseThemes: [],
+            clientThemes: [],
+            thoughtLeadership: [],
+            campaigns: []
+        };
+    }
+
+    componentDidMount() {
+        API.get().then(res => {
+            const { themes } = res.data;
+            this.setState({
+                enterpriseThemes: themes.enterpriseThemes,
+                clientThemes: themes.clientThemes,
+                thoughtLeadership: themes.thoughtLeadership,
+                campaigns: themes.campaigns
+            });
+        });
     }
 
     renderThemes(data) {
@@ -49,13 +42,13 @@ export default class Themes extends Component {
                         <div>
                             <h5 className="product-title">Enterprise Themes</h5>
                         </div>
-                        {this.enterpriseThemes.map(this.renderThemes)}
+                        {this.state.enterpriseThemes.map(this.renderThemes)}
                     </div>
                     <div className="col s12 m3 l3">
                         <div>
                             <h5 className="product-title">Client Themes</h5>
                         </div>
-                        {this.clientThemes.map(this.renderThemes)}
+                        {this.state.clientThemes.map(this.renderThemes)}
                     </div>
                     <div className="col s12 m3 l3">
                         <div>
@@ -63,13 +56,13 @@ export default class Themes extends Component {
                                 Thought Leadership
                             </h5>
                         </div>
-                        {this.thoughtLeadership.map(this.renderThemes)}
+                        {this.state.thoughtLeadership.map(this.renderThemes)}
                     </div>
                     <div className="col s12 m3 l3">
                         <div>
                             <h5 className="product-title">Campaigns</h5>
                         </div>
-                        {this.Campaigns.map(this.renderThemes)}
+                        {this.state.campaigns.map(this.renderThemes)}
                     </div>
                 </div>
             </div>
