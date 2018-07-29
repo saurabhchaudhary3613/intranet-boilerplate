@@ -8,7 +8,9 @@ module.exports = {
     index: './src/index.js',
     products: './src/products.js',
     themes: './src/themes.js',
-    teams: './src/teams.js'
+    teams: './src/teams.js',
+    quickLinks: './src/quick-links.js',
+    myFavorites: './src/my-favorites.js'
   },
   output: {
     path: path.join(__dirname, '/dist'),
@@ -65,6 +67,16 @@ module.exports = {
       template: './src/views/teams.html',
       chunks: ['teams'],
       filename: './teams.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/views/quick-links.html',
+      chunks: ['quick-links'],
+      filename: './quick-links.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/views/my-favorites.html',
+      chunks: ['my-favorites'],
+      filename: './my-favorites.html'
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css',

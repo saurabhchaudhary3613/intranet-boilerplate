@@ -31,6 +31,12 @@ app.get('/teams', function (req, res){
 app.get('/themes', function (req, res){
     res.render('themes');
 });
+app.get('/quick-links', function (req, res){
+    res.render('quick-links');
+});
+app.get('/my-favorites', function (req, res){
+    res.render('my-favorites');
+});
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')

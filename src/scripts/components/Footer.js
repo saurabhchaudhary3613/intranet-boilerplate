@@ -12,13 +12,17 @@ export default class Footer extends Component {
                     PRODUCTS
                 </a>
                 <a className="btn nav-btn" href="/themes">
-                    THEMES
+                    INSIGHTS
                 </a>
                 <a className="btn nav-btn" href="/teams">
                     TEAMS
                 </a>
-                <a className="btn nav-btn">QUICK LINKS</a>
-                <a className="btn nav-btn">MY FAVORITES</a>
+                <a className="btn nav-btn" href="/quick-links">
+                    QUICK LINKS
+                </a>
+                <a className="btn nav-btn" href="/my-favorites">
+                    MY FAVORITES
+                </a>
             </div>
         );
     }
