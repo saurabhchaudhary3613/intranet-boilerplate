@@ -53,7 +53,7 @@ export default class Products extends Component {
                         <div className="col s12 m4 l4">
                             <div>
                                 <h5 className="product-title">
-                                    Other Investment Options
+                                    Product Strategy
                                 </h5>
                             </div>
                             {this.state.otherInvestmentOptions.map(
@@ -63,7 +63,7 @@ export default class Products extends Component {
                         <div className="col s12 m4 l4">
                             <div>
                                 <h5 className="product-title">
-                                    Product Resources
+                                    Product Analysis
                                 </h5>
                             </div>
                             {this.state.productResources.map(
