@@ -13,15 +13,19 @@ export default class Themes extends Component {
     }
 
     componentDidMount() {
-        API.get().then(res => {
-            const { themes } = res.data;
-            this.setState({
-                enterpriseThemes: themes.enterpriseThemes,
-                clientThemes: themes.clientThemes,
-                thoughtLeadership: themes.thoughtLeadership,
-                campaigns: themes.campaigns
+        API.get()
+            .then(res => {
+                const { themes } = res.data;
+                this.setState({
+                    enterpriseThemes: themes.enterpriseThemes,
+                    clientThemes: themes.clientThemes,
+                    thoughtLeadership: themes.thoughtLeadership,
+                    campaigns: themes.campaigns
+                });
+            })
+            .catch(error => {
+                console.log(error);
             });
-        });
     }
 
     renderThemes(data) {

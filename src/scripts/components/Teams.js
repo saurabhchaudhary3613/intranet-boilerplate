@@ -12,18 +12,21 @@ export default class Teams extends Component {
     }
 
     componentDidMount() {
-        API.get().then(res => {
-            const { teams } = res.data;
-            this.setState({
-                sales: teams.sales,
-                keyAccountAndFirm: teams.keyAccountAndFirm,
-                igs: teams.igs
+        API.get()
+            .then(res => {
+                const { teams } = res.data;
+                this.setState({
+                    sales: teams.sales,
+                    keyAccountAndFirm: teams.keyAccountAndFirm,
+                    igs: teams.igs
+                });
+            })
+            .catch(error => {
+                console.log(error);
             });
-        });
     }
 
     renderTeams(data) {
-        console.log(data);
         return (
             <div key={data}>
                 <div className="product-container">
