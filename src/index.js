@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import Search from './scripts/components/Search';
 import Home from './scripts/components/Home';
 import Products from './scripts/components/Products';
 import Teams from './scripts/components/Teams';
@@ -11,6 +12,7 @@ import Footer from './scripts/components/Footer';
 import './styles/style.scss';
 
 const headerId = document.getElementById('header');
+const searchElementId = document.getElementById('search');
 const homeElementId = document.getElementById('home');
 const productElementId = document.getElementById('products');
 const teamsElementId = document.getElementById('teams');
@@ -22,7 +24,9 @@ const footerId = document.getElementById('footer');
 if (headerId) {
     ReactDom.render(<Header />, document.getElementById('header'));
 }
-
+if (searchElementId) {
+    ReactDom.render(<Search />, document.getElementById('search'));
+}
 if (homeElementId) {
     ReactDom.render(<Home />, document.getElementById('home'));
 }

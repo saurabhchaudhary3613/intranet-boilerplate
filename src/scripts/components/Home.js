@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Home = () => (
-    <div>
-        <div id="home" className="container body-container">
-            Homepage
-        </div>
-    </div>
-);
+export default class Home  extends Component {
 
-export default Home;
+    render() {
+
+        return(
+            <div>
+                <div id="home" className="row">
+                    Homepage
+                </div>
+            </div>
+        )
+    }
+}

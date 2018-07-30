@@ -7,8 +7,8 @@ export default class Themes extends Component {
         this.state = {
             enterpriseThemes: [],
             clientThemes: [],
-            thoughtLeadership: [],
-            campaigns: []
+            thoughtLeadership: []
+            //campaigns: []
         };
     }
 
@@ -19,8 +19,8 @@ export default class Themes extends Component {
                 this.setState({
                     enterpriseThemes: themes.enterpriseThemes,
                     clientThemes: themes.clientThemes,
-                    thoughtLeadership: themes.thoughtLeadership,
-                    campaigns: themes.campaigns
+                    thoughtLeadership: themes.thoughtLeadership
+                    //campaigns: themes.campaigns
                 });
             })
             .catch(error => {
@@ -42,19 +42,19 @@ export default class Themes extends Component {
         return (
             <div className="container body-container">
                 <div className="row">
-                    <div className="col s12 m3 l3">
+                    <div className="col s12 m4 l4">
                         <div>
                             <h5 className="product-title">Enterprise Themes</h5>
                         </div>
                         {this.state.enterpriseThemes.map(this.renderThemes)}
                     </div>
-                    <div className="col s12 m3 l3">
+                    <div className="col s12 m4 l4">
                         <div>
                             <h5 className="product-title">Client Themes</h5>
                         </div>
                         {this.state.clientThemes.map(this.renderThemes)}
                     </div>
-                    <div className="col s12 m3 l3">
+                    <div className="col s12 m4 l4">
                         <div>
                             <h5 className="product-title">
                                 Thought Leadership
@@ -62,12 +62,12 @@ export default class Themes extends Component {
                         </div>
                         {this.state.thoughtLeadership.map(this.renderThemes)}
                     </div>
-                    <div className="col s12 m3 l3">
+                    {/* <div className="col s12 m3 l3">
                         <div>
                             <h5 className="product-title">Campaigns</h5>
                         </div>
                         {this.state.campaigns.map(this.renderThemes)}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

@@ -7,7 +7,8 @@ export default class Teams extends Component {
         this.state = {
             sales: [],
             keyAccountAndFirm: [],
-            igs: []
+            igs: [],
+            marketing: []
         };
     }
 
@@ -18,7 +19,8 @@ export default class Teams extends Component {
                 this.setState({
                     sales: teams.sales,
                     keyAccountAndFirm: teams.keyAccountAndFirm,
-                    igs: teams.igs
+                    igs: teams.igs,
+                    marketing: teams.marketing
                 });
             })
             .catch(error => {
@@ -39,13 +41,13 @@ export default class Teams extends Component {
         return (
             <div className="container body-container">
                 <div className="row">
-                    <div className="col s12 m4 l4">
+                    <div className="col s12 m3 l3">
                         <div>
                             <h5 className="product-title">Sales</h5>
                         </div>
                         {this.state.sales.map(this.renderTeams)}
                     </div>
-                    <div className="col s12 m4 l4">
+                    <div className="col s12 m3 l3">
                         <div>
                             <h5 className="product-title">
                                 Key Accounts & Firms
@@ -53,9 +55,15 @@ export default class Teams extends Component {
                         </div>
                         {this.state.keyAccountAndFirm.map(this.renderTeams)}
                     </div>
-                    <div className="col s12 m4 l4">
+                    <div className="col s12 m3 l3">
                         <div>
                             <h5 className="product-title">ISG</h5>
+                        </div>
+                        {this.state.igs.map(this.renderTeams)}
+                    </div>
+                    <div className="col s12 m3 l3">
+                        <div>
+                            <h5 className="product-title">Marketing</h5>
                         </div>
                         {this.state.igs.map(this.renderTeams)}
                     </div>
