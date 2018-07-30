@@ -5,12 +5,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    products: './src/products.js',
-    themes: './src/themes.js',
-    teams: './src/teams.js',
-    quickLinks: './src/quick-links.js',
-    myFavorites: './src/my-favorites.js'
+    index: './src/index.js'
+    //,
+    // products: './src/products.js',
+    // themes: './src/themes.js',
+    // teams: './src/teams.js',
+    // quickLinks: './src/quick-links.js',
+    // myFavorites: './src/my-favorites.js'
   },
   output: {
     path: path.join(__dirname, '/dist'),
